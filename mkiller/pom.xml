@@ -3,17 +3,74 @@
 	<groupId>br.com.ahw</groupId>
 	<artifactId>mkiller</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>	
+	
+	<packaging>jar</packaging>
 	
 	<parent>
 	    <groupId>org.springframework.boot</groupId>
 	    <artifactId>spring-boot-starter-parent</artifactId>
 	    <version>1.3.5.RELEASE</version>
 	</parent>
+	
 	<dependencies>
+
 	    <dependency>
 	        <groupId>org.springframework.boot</groupId>
 	        <artifactId>spring-boot-starter-web</artifactId>
 	    </dependency>
+		<!-- 
+	    <dependency>
+	        <groupId>org.springframework.boot</groupId>
+	        <artifactId>spring-boot-starter-tomcat</artifactId>
+	        <scope>provided</scope>
+	    </dependency>	    
+	     -->
+	    
+	    <!-- Utilizado para teste de rest -->
+		<dependency>
+		    <groupId>br.com.caelum</groupId>
+		    <artifactId>restfulie</artifactId>
+		    <version>1.0.1</version>
+		    
+		    <exclusions>
+		      <exclusion> 
+		        <groupId>org.slf4j</groupId>
+		        <artifactId>slf4j-log4j12</artifactId>
+		      </exclusion>
+		      <exclusion> 
+		        <groupId>log4j</groupId>
+		        <artifactId>log4j</artifactId>
+		      </exclusion>
+		    </exclusions>		    
+		</dependency>
+		 
+		<dependency>
+		    <groupId>junit</groupId>
+		    <artifactId>junit</artifactId>
+		    <version>4.11</version>
+		</dependency>
+		 
+		<dependency>
+		    <groupId>com.google.code.gson</groupId>
+		    <artifactId>gson</artifactId>
+		    <version>2.3.1</version>
+		</dependency>
+		<!-- FIM: Utilizado para teste de rest -->
+		
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>bootstrap</artifactId>
+			<version>3.3.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>jquery</artifactId>
+			<version>2.1.4</version>
+		</dependency>		
 	</dependencies>
 
 	<build>
