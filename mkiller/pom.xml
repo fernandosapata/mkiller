@@ -9,7 +9,7 @@
         <docker.image.prefix>ahw</docker.image.prefix>
     </properties>	
 	
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	
 	<parent>
 	    <groupId>org.springframework.boot</groupId>
