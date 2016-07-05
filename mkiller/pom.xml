@@ -104,7 +104,7 @@
 	<configuration>
 		<imageName>${docker.image.prefix}/${project.artifactId}</imageName>
 		<dockerDirectory>${project.build.directory}/docker</dockerDirectory>
-		<pushImage>true</pushImage>
+		<pushImage>false</pushImage>
 		<resources>
 			<resource>
 				<targetPath>/</targetPath>

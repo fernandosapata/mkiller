@@ -1,7 +1,7 @@
 FROM frolvlad/alpine-oraclejdk8:slim
 VOLUME /tmp
 ADD mkiller-0.0.1-SNAPSHOT.jar app.jar
-COPY app.jar /usr/local/tomcat/webapps/app.jar
+COPY mkiller-0.0.1-SNAPSHOT.jar /usr/local/tomcat/webapps/app.jar
 EXPOSE 8080
 RUN sh -c 'touch /app.jar'
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/usr/local/tomcat/webapps/app.jar"]
