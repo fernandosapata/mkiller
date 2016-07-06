@@ -9,7 +9,7 @@
         <docker.image.prefix>ahw</docker.image.prefix>
     </properties>	
 	
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	
 	<parent>
 	    <groupId>org.springframework.boot</groupId>
@@ -94,7 +94,8 @@
 	        <plugin>
 	            <groupId>org.springframework.boot</groupId>
 	            <artifactId>spring-boot-maven-plugin</artifactId>
-	        </plugin>	        
+	        </plugin>
+	        
 			<plugin>
 				<groupId>com.spotify</groupId>
 				<artifactId>docker-maven-plugin</artifactId>
@@ -110,7 +111,7 @@
 						<resource>
 							<targetPath>/</targetPath>
 							<directory>${project.build.directory}</directory>
-							<include>${project.build.finalName}.jar</include>
+							<include>${project.build.finalName}.war</include>
 						</resource>
 					</resources>
 				</configuration>
